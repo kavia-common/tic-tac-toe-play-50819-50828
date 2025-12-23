@@ -1,16 +1,27 @@
 # tic_tac_toe_frontend
 
-A new Flutter project.
+A Flutter Tic Tac Toe app featuring the Ocean Professional theme.
 
-## Getting Started
+Features:
+- Two-player local gameplay
+- Animated 3x3 grid with subtle reveal and winning line highlight
+- Score bar with current turn indicator
+- Reset board (keeps scores)
+- Reset scores via long-press on "Reset Board" or from the overflow menu
+- Scores persisted with shared_preferences
+- Modern styling with rounded corners, soft shadows, and subtle gradients
 
-This project is a starting point for a Flutter application.
+Controls:
+- Tap a cell to place the current player's mark (X starts)
+- Long-press the "Reset Board" button to reset scores to 0
+- Use the "..." menu to reset scores or board
 
-A few resources to get you started if this is your first Flutter project:
+Tech:
+- Flutter (Material 3)
+- shared_preferences for persistence
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```bash
+flutter pub get
+flutter test
+flutter run
+```

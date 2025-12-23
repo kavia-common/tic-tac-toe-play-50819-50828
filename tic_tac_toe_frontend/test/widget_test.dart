@@ -3,16 +3,16 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:tic_tac_toe_frontend/main.dart';
 
 void main() {
-  testWidgets('App generation message displayed', (WidgetTester tester) async {
+  testWidgets('App renders title and grid', (WidgetTester tester) async {
     await tester.pumpWidget(const MyApp());
 
-    expect(find.text('tic_tac_toe_frontend App is being generated...'), findsOneWidget);
-    expect(find.byType(CircularProgressIndicator), findsOneWidget);
-  });
+    // AppBar title
+    expect(find.text('Tic Tac Toe'), findsOneWidget);
 
-  testWidgets('App bar has correct title', (WidgetTester tester) async {
-    await tester.pumpWidget(const MyApp());
+    // Reset button exists
+    expect(find.byKey(const Key('reset_board_button')), findsOneWidget);
 
-    expect(find.text('tic_tac_toe_frontend'), findsOneWidget);
+    // Grid container is present
+    expect(find.byKey(const Key('game_grid_container')), findsOneWidget);
   });
 }
